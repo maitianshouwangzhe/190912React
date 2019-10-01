@@ -1,0 +1,58 @@
+.header{
+  height: 80px;
+  background-color: white;
+
+  .header-top{
+    height: 40px;
+    border-bottom: 1px solid cornflowerblue;
+    text-align: right;
+    // 设置了行高，使得文本垂直居中
+    line-height: 40px;
+    padding-right: 30px;
+    span{
+      margin-right: 15px;
+    }
+
+  }
+
+  .header-bottom{
+    height: 40px;
+    // 水平排开
+    display: flex;
+    // 垂直居中
+    align-items: center;
+    .header-bottom-left{
+      position: relative;
+      width: 25%;
+      font-size: 20px;
+      // 左侧的文本居中
+      text-align: center;
+      // 伪类选择器
+      &::after{
+        content: '';
+        position: absolute;
+        // 表示正方形的右侧在正中间
+        right: 50%;
+        top:100%;
+        transform: translateX(50%);
+        border-top: 20px solid white;
+        border-right: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        border-left: 20px solid transparent;
+
+
+      }
+    }
+    .header-bottom-right{
+      width: 75%;
+      text-align: right;
+      padding-right: 30px;
+      img{
+        margin: 0 15px;
+      }
+
+    }
+
+
+  }
+}
